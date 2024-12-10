@@ -15,7 +15,6 @@ def edit_core_metadata(file_path, creation_date):
                 created_element = root.find('.//{http://purl.org/dc/terms/}created')
                 modified_element = root.find('.//{http://purl.org/dc/terms/}modified')
 
-                # Posodobi ali dodaj 'created' element
                 if created_element is not None:
                     created_element.text = creation_date
                 else:
@@ -26,7 +25,6 @@ def edit_core_metadata(file_path, creation_date):
                     created_element.text = creation_date
                     root.append(created_element)
 
-                # Posodobi ali dodaj 'modified' element
                 if modified_element is not None:
                     modified_element.text = creation_date
                 else:
